@@ -18,6 +18,8 @@ public class RNAndroidNotificationListener extends NotificationListenerService {
     public void onNotificationPosted(StatusBarNotification sbn) {       
         Notification statusBarNotification = sbn.getNotification();
 
+        Log.d(TAG, "Notification Posted Event Fired"); 
+
         if (statusBarNotification == null || statusBarNotification.extras == null) {
             Log.d(TAG, "The notification received has no data");
             return;
@@ -42,6 +44,8 @@ public class RNAndroidNotificationListener extends NotificationListenerService {
     @Override
     public void onNotificationRemoved(StatusBarNotification sbn) {
         Notification statusBarNotification = sbn.getNotification();
+        
+        Log.d(TAG, "Notification Removed Event Fired"); 
 
         if (statusBarNotification == null || statusBarNotification.extras == null) {
             Log.d(TAG, "The notification received has no data");

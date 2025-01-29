@@ -20,6 +20,7 @@ import android.graphics.drawable.BitmapDrawable;
 public class RNNotification {
     private static final String TAG = "RNAndroidNotificationListener";
     
+    protected String listener;
     protected String app;
     protected String title;
     protected String titleBig;
@@ -35,7 +36,8 @@ public class RNNotification {
     protected String image;
     protected String time;
     protected String iconLarge;
-    public RNNotification(Context context, StatusBarNotification sbn) {
+    public RNNotification(Context context, StatusBarNotification sbn, String listener) {
+        this.listener = listener;
         Notification notification = sbn.getNotification();
 
         if (notification != null && notification.extras != null) {

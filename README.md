@@ -35,6 +35,7 @@ RNAndroidNotificationListener.requestPermission()
 const headlessNotificationListener = async ({ notification }) => {/**
      * This notification is a JSON string in the follow format:
      *  {
+     *      "listener": "posted" | "removed"
      *      "time": string,
      *      "app": string,
      *      "title": string,

@@ -29,7 +29,7 @@ public class RNAndroidNotificationListener extends NotificationListenerService {
 
         Intent serviceIntent = new Intent(context, RNAndroidNotificationListenerHeadlessJsTaskService.class);
 
-        RNNotification notification = new RNNotification(context, sbn);
+        RNNotification notification = new RNNotification(context, sbn,"posted");
 
         Gson gson = new Gson();
         String serializedNotification = gson.toJson(notification);
@@ -56,7 +56,7 @@ public class RNAndroidNotificationListener extends NotificationListenerService {
 
         Intent serviceIntent = new Intent(context, RNAndroidNotificationListenerHeadlessJsTaskService.class);
 
-        RNNotification notification = new RNNotification(context, sbn);
+        RNNotification notification = new RNNotification(context, sbn, "removed");
 
         Gson gson = new Gson();
         String serializedNotification = gson.toJson(notification);
